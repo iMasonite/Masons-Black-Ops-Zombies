@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("MasonsBlackOpsZombies")> 
-<Assembly: AssemblyDescription("Call of Duty: Black Ops Trainer For Zombies")> 
-<Assembly: AssemblyCompany("Trainer")> 
+<Assembly: AssemblyDescription("Call of Duty: Black Ops Zombies")> 
+<Assembly: AssemblyCompany("Keneti Systems")> 
 <Assembly: AssemblyProduct("MasonsBlackOpsZombies")> 
-<Assembly: AssemblyCopyright("Copyright © Black Ops Trainer")> 
-<Assembly: AssemblyTrademark("©")> 
+<Assembly: AssemblyCopyright("Copyright © iMasonite 2025")> 
+<Assembly: AssemblyTrademark("£")> 
 
 <Assembly: ComVisible(False)> 
 

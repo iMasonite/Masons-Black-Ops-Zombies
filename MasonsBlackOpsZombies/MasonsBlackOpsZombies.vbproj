@@ -67,7 +67,7 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>BlackOps.ico</ApplicationIcon>
+    <ApplicationIcon>MasonsBlackOpsZombies.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -79,17 +79,16 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -101,7 +100,6 @@
     <Import Include="System.Diagnostics" />
     <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
-    <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
@@ -111,24 +109,28 @@
     <Compile Include="CommandCentre.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editor.Designer.vb">
-      <DependentUpon>Editor.vb</DependentUpon>
+    <Compile Include="DataTypes.vb" />
+    <Compile Include="Globals.vb" />
+    <Compile Include="OptionSettings.Designer.vb">
+      <DependentUpon>OptionSettings.vb</DependentUpon>
     </Compile>
-    <Compile Include="Editor.vb">
+    <Compile Include="OptionSettings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MemoryAddresses.vb" />
     <Compile Include="ProcMem.vb" />
-    <Compile Include="Trainer.vb">
+    <Compile Include="BlackOpsTrainer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Trainer.Designer.vb">
-      <DependentUpon>Trainer.vb</DependentUpon>
+    <Compile Include="BlackOpsTrainer.Designer.vb">
+      <DependentUpon>BlackOpsTrainer.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -140,16 +142,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Utilities.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CommandCentre.resx">
       <DependentUpon>CommandCentre.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editor.resx">
-      <DependentUpon>Editor.vb</DependentUpon>
+    <EmbeddedResource Include="BlackOpsTrainer.resx">
+      <DependentUpon>BlackOpsTrainer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Trainer.resx">
-      <DependentUpon>Trainer.vb</DependentUpon>
+    <EmbeddedResource Include="OptionSettings.resx">
+      <DependentUpon>OptionSettings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -159,9 +162,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <EmbeddedResource Include="DataObjects\DictionaryWeapons.json" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -172,6 +179,8 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <None Include="packages.config" />
+    <EmbeddedResource Include="DataObjects\Weapons.json" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -201,7 +210,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BlackOps.ico" />
+    <Content Include="MasonsBlackOpsZombies.ico" />
+    <EmbeddedResource Include="DataObjects\Locations.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

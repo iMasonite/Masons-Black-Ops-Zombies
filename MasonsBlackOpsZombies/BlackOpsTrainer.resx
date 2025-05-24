@@ -117,56 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Rtbx_CommandList.Text" xml:space="preserve">
-    <value>                                                                                                      F1 WILL SHOW CONSOLE IN GAME!!
-
-To enable console cheats for black ops you must do the following:
-
-    Open "Computer" on your computer
-    Go to Computer &gt;(C:) &gt; Program Files (x86) &gt; Steam &gt; Steam Apps &gt; common &gt; call of duty black ops &gt; players
-    Open "config"
-    Press Ctrl+f and type in "monkey"
-    set "seta monkeytoy" to "0"
-    Go to the bottom of the text and type in "spu"
-    Press enter twice
-    Type "bind (key) "(command)"
-    Click back to "players" and right click on "config"
-    Click "Properties" and turn off "Read Only"
-    Save the "config file"
-    Right click on "config", click "Properties", and enable "Read Only"
-    Play campaign/zombies solo. 
-
-
-Commands:
-
-
-god                        \\ Enables godmode (you can't die)
-ai axis delete             \\ Deletes the zombies (they will continue to spawn though)
-give all                   \\ It's supposed to give you all the guns. The game has a limit though, so you only get some of them  
-noclip                     \\ Fly through walls
-notarget                   \\ zombies ignore you (no points for killing them)
-take all                   \\ Takes everything from you (including your health, knife, grenades, and claymores)  
-dropweapon                 \\ Drops your current weapon
-ufo                        \\ Similar to noclip, but you move up and down with the left and right triggers.
-give ammo                  \\ Replenishes all ammunition
-demigod                    \\ Increased health
-kill                       \\ Kills you
-fast_restart               \\ Restarts the map
-setviewpos                 \\ Teleports you to the defined coordinates.
-g_speed 400                          \\ Increased player speed (includes walking and sprinting)
-r_fog 0                              \\ Disables fog
-timescale 2                          \\ Controls the game speed (1 is default, 2 is the highest, and numbers between 0 and 1 can be used for slow motion)
-player_meleeRange 999                \\ Controls the range of melee attacks (in this case, extremely far)
-player_clipSizeMultiplier 999        \\ Controls your clip size (in this case, extremely large)
-perk_weapratemultiplier 0            \\ Increases the speed of double tap when it is bought
-perk_armorvest 0                     \\ Increases health bonus from juggernaut when bought
-perk_weapReloadMultiplier 0.001      \\ Instant reload when sleight of hand is bought
-phys_gravity 99                      \\ Makes zombies float when they die
-Revive_Trigger_Radius 99999          \\ Controls the range you can revive someone from (in this case, extremely far)
-player_lastStandBleedoutTime 400     \\ Controls the bleedout time when downed (EXTREME)
-magic_chest_movable 0                \\ Controls whether or not the mystery box will move (1 for yes, 0 for no)
-player_burstFireCooldown 0           \\ No delay between burst fire weapon's burst. </value>
-  </data>
+  <metadata name="Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>26, 4</value>
+  </metadata>
+  <metadata name="ToolTip_MainForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>105, 4</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
